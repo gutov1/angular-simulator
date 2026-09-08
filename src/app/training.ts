@@ -19,11 +19,11 @@ interface IEmployee extends IUser {
   patronymic: string;
 }
 
-function transformText (text: string, format: 'uppercase' | 'lowercase' |'capitalize'): string {
-  if (format === 'uppercase') {
+function transformText (text: string, textFormat: string): string {
+  if (textFormat === 'uppercase') {
     return text.toUpperCase();
   }
-  if (format === 'lowercase') {
+  if (textFormat === 'lowercase') {
     return text.toLowerCase();
   }
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
@@ -51,7 +51,7 @@ const users: IUser[] = [
   }
 ];
 
-const availableUsers = users.filter(user => (user.age >= 24));
+const availableUsers = users.filter((user: IUser) => (user.age >= 24));
 
 console.log(transformText("text form add", "uppercase"))
 

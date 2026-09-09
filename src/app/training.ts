@@ -51,7 +51,7 @@ const users: IUser[] = [
   }
 ];
 
-const availableUsers = users.filter((user: IUser) => (user.age >= 24));
+const availableUsers: IUser[] = users.filter((user: IUser) => (user.age >= 24));
 
 console.log(transformText("text form add", "uppercase"))
 

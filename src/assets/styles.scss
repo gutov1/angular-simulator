@@ -1,0 +1,22 @@
+@use "./fonts";
+@use "./normalize";
+
+* {
+  font-family: 'Nunito Sans';
+}
+
+.container {
+  display: block;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+  --primary-color: #18121E;
+  --inverted-color: #FDFDFD;
+  --secondary-color: #F2BE22;
+  --link-color: #1A3E3E;
+}

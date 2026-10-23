@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
     <a href="#" class="logo">
-      <img src="/images/logo_icon.svg" alt="Румтибет">
+      <img src="/images/logo-icon.svg" alt="Румтибет">
       <span class="logo__text">{{companyName}}</span>
     </a>
 
@@ -28,10 +28,37 @@
       </ul>
     </nav>
 
-    <a href="#" class="header__button">Консультация</a>
+    <a href="#" class="button header__button">Консультация</a>
   </div>
 </header>
 
-<footer>
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container">
+    <h1 class="hero__title">Насладись прогулкой в горах с командой единомышленников</h1>
+    
+    <form class="search-form">
+      <div class="search-form__field">
+        <select class="search-form__control" id="location" name="location">
+          <option value="">Локация для тура</option>
+        </select>
+        <span class="search-form__hint">выберите из списка</span>
+      </div>
 
-</footer>
+      <div class="search-form__field">
+        <input type="date" class="search-form__control" placeholder="Дата похода"/>
+        <span class="search-form__hint">укажите дату</span>
+      </div>
+
+      <div class="search-form__field">
+        <select class="search-form__control" id="participant" name="participant">
+          <option value="">Участники</option>
+        </select>
+        <span class="search-form__hint">выберите из списка</span>
+      </div>
+
+      <button type="submit" class="button search-form__button">Найти программу</button>
+    </form>
+  </div>
+</section>
+

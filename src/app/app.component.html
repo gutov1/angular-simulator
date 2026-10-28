@@ -1,1 +1,64 @@
-<h1 style="display: flex; justify-content: center; font-family: sans-serif;">NGX SIMULATOR</h1>
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="/images/logo-icon.svg" alt="Румтибет">
+      <span class="logo__text">{{companyName}}</span>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-home-link">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-guide-link">Про гида</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-tour-program-link">Программа тура</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-pricing-link">Стоимость</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-blog-link">Блог</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" id="nav-contacts-link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="#" class="button header__button" id="header-consultation-button">Консультация</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container">
+    <h1 class="hero__title">Насладись прогулкой в горах с командой единомышленников</h1>
+    
+    <form class="search-form" id="tour-search-form">
+      <div class="search-form__field">
+        <select class="search-form__control" id="tour-location-select" name="location">
+          <option value="">Локация для тура</option>
+        </select>
+        <span class="search-form__hint">выберите из списка</span>
+      </div>
+
+      <div class="search-form__field">
+        <input type="date" class="search-form__control" id="tour-date-input" placeholder="Дата похода"/>
+        <span class="search-form__hint">укажите дату</span>
+      </div>
+
+      <div class="search-form__field">
+        <select class="search-form__control" id="tour-participants-select" name="participant">
+          <option value="">Участники</option>
+        </select>
+        <span class="search-form__hint">выберите из списка</span>
+      </div>
+
+      <button type="submit" class="button search-form__button" id="tour-search-submit-button">Найти программу</button>
+    </form>
+  </div>
+</section>
+

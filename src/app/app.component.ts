@@ -12,13 +12,13 @@ export class AppComponent {
   companyName: string = 'Румтибет';
 
   constructor() {
-    console.log('красный:', this.isPrimaryColor(Color.Red));
+    console.log('красный:', this.isPrimaryColor(Color.RED));
     this.saveLastVisit();
     this.saveVisitCount();
   }
 
   private isPrimaryColor(color: Color): boolean {
-    return color === Color.Red || color === Color.Green || color === Color.Blue;
+    return color === Color.RED || color === Color.GREEN || color === Color.BLUE;
   }
 
   private saveLastVisit(): void {

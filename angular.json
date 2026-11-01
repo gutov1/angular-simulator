@@ -3,7 +3,7 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "edf66228-22c2-441b-845d-9407a628ef23"
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -36,7 +36,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles.scss"
             ],
             "polyfills": [
               "zone.js"

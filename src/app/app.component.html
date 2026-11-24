@@ -86,3 +86,48 @@
   </div>
 </section>
 
+<section class="offers">
+  <div class="container">
+    <div class="offers__content">
+      <span class="section-subtitle">наше предложение</span>
+      <h2 class="section-title">Лучшие программы для тебя</h2>            
+      <p class="section-desc">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
+      
+      <div class="offer">
+        <div class="offers__features">
+          @for (item of features; track item.id) {
+            <div class="offers__feature">
+              <div class="offers__feature-icon">
+                <img [src]="item.icon" [alt]="item.title">
+              </div>
+
+              <div class="offers__feature-body">
+                <h3 class="offers__feature-title">{{ item.title }}</h3>
+                <p class="offers__feature-text">{{ item.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
+        
+      </div>
+        
+      <button href="#" class="button about__button">Стоимость программ</button>
+    </div>
+
+    <div class="offers__gallery">
+      <div class="offers__gallery-item">
+        <img src="/images/offers/lake.jpg" alt="Озеро в каньоне">
+      </div>
+      <div class="offers__gallery-item">
+        <img src="/images/offers/canyon.jpg" alt="Вид на каньон">
+      </div>
+      <div class="offers__gallery-item">
+        <img src="/images/offers/snowmobile.jpg" alt="Снегоход в горах">
+      </div>
+      <div class="offers__gallery-item">
+        <img src="/images/offers/valley.jpg" alt="Минеральный источник">
+      </div>
+    </div>
+  </div>
+</section>
+

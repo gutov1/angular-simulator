@@ -185,3 +185,103 @@
     width: 580px;
   }
 }
+
+.offers {
+  background-color: rgba(243, 245, 244, 1);
+  padding: 80px 0 100px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+
+    .offers__content {
+      
+      .offers__features {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .offers__feature {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        .offers__feature-icon {
+          width: 50px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:nth-child(1) .offers__feature-icon {
+          background-color: rgba(229, 238, 235, 1);
+        }
+
+        &:nth-child(2) .offers__feature-icon {
+          background-color: rgba(227, 230, 238, 1);
+        }
+
+        &:nth-child(3) .offers__feature-icon {
+          background-color: rgba(243, 241, 225, 1);
+        }
+
+        .offers__feature-body {
+          .offers__feature-title {
+            margin: 0 0 4px 0;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .offers__feature-text {
+            margin: 0;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+
+  .offers__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 10px;
+
+    .offers__gallery-item {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+
+      &:nth-child(1) {
+        border-radius: 0 50px 0 50px;
+      }
+
+      &:nth-child(2) {
+        border-radius: 50px 0 50px 0;
+      }
+
+      &:nth-child(3) {
+        border-radius: 50px 0 50px 0;
+      }
+
+      &:nth-child(4) {
+        border-radius: 0 50px 0 50px;
+      }
+    }
+  }
+}

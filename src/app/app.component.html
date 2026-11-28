@@ -39,25 +39,45 @@
     
     <form class="search-form" id="tour-search-form">
       <div class="search-form__field">
-        <select class="search-form__control" id="tour-location-select" name="location">
+        <select [(ngModel)]="selectedLocation" class="search-form__control" id="tour-location-select" name="location">
           <option value="">Локация для тура</option>
+          <option value="alps">Альпы</option>
+          <option value="caucasus">Кавказ</option>
+          <option value="altay">Алтай</option>
         </select>
         <span class="search-form__hint">выберите из списка</span>
       </div>
 
       <div class="search-form__field">
-        <input type="date" class="search-form__control" id="tour-date-input" placeholder="Дата похода"/>
+        <div class="search-form__date-wrap">
+          <input 
+            [(ngModel)]="selectedDate" 
+            [class.search-form__control--empty]="!selectedDate"
+            type="date" 
+            name="date" 
+            class="search-form__control" 
+            id="tour-date-input"
+          />
+
+          @if (!selectedDate) {
+            <span class="search-form__placeholder">Дата похода</span>
+          }
+        </div>
+
         <span class="search-form__hint">укажите дату</span>
       </div>
 
       <div class="search-form__field">
-        <select class="search-form__control" id="tour-participants-select" name="participant">
+        <select [(ngModel)]="selectedParticipants" class="search-form__control" id="tour-participants-select" name="participant">
           <option value="">Участники</option>
+          <option value="4">4 человека</option>
+          <option value="5">5 человек</option>
+          <option value="6">6+ человек</option>
         </select>
         <span class="search-form__hint">выберите из списка</span>
       </div>
 
-      <button type="submit" class="button search-form__button" id="tour-search-submit-button">Найти программу</button>
+      <button [disabled]="isSearchDisabled" type="submit" class="button search-form__button" id="tour-search-submit-button">Найти программу</button>
     </form>
   </div>
 </section>

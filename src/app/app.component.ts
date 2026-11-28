@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { Color } from '../enums/Color';
 import { OfferFeature } from '../app/OfferFeature';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
 
-  companyName: string = 'Румтибет';
+  companyName: string = 'Румтибет'
+
+  selectedLocation: string = '';
+  selectedDate: string = '';
+  selectedParticipants: string = '';
 
   features: OfferFeature[] = [
     {
@@ -37,6 +42,10 @@ export class AppComponent {
     console.log('красный:', this.isPrimaryColor(Color.RED));
     this.saveLastVisit();
     this.saveVisitCount();
+  }
+
+  get isSearchDisabled(): boolean {
+    return !this.selectedLocation || !this.selectedDate || !this.selectedParticipants;
   }
 
   private isPrimaryColor(color: Color): boolean {

@@ -87,6 +87,20 @@
         display: flex;
         flex-direction: column;
 
+        .search-form__date-wrap {
+          position: relative;
+        }
+
+        .search-form__placeholder {
+          position: absolute;
+          left: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--inverted-color);
+          font-weight: 700;
+          pointer-events: none;
+        }
+
         .search-form__control {
           width: 270px;
           height: 52px;
@@ -101,6 +115,14 @@
           background-position: right 16px center;
           padding-right: 48px;
         }
+
+        .search-form__control--empty {
+          color: transparent;
+
+          &::-webkit-datetime-edit {
+            color: transparent;
+          }
+        }
         
         select.search-form__control {
           background-image: url('/images/arrow-icon.svg');
@@ -113,7 +135,11 @@
         
         ::-webkit-calendar-picker-indicator {
           position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
           opacity: 0;
+          cursor: pointer;
         }  
 
         .search-form__hint {
@@ -127,6 +153,13 @@
         width: 213px;
         white-space: nowrap;
         font-weight: 700;
+
+        &:disabled {
+          cursor: not-allowed;
+          color: var(--link-color);
+          background-color: var(--inverted-color);
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -213,7 +246,7 @@
         padding: 8px 12px;
         border-radius: 8px;
         transition: transform 0.3s ease, background-color 0.3s ease;
-        
+
         &:hover {
           transform: scale(1.03);
         }
